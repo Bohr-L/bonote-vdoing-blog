@@ -1,7 +1,7 @@
 ---
 home: true
 # heroImage: /img/house1.jpg
-heroText: Bo-Note
+heroText: Bohr-L's Note
 tagline: 用代码与笔记，呈现技术成长。
 # actionText: 立刻进入 →
 # actionLink: /web/

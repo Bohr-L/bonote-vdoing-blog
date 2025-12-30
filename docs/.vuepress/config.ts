@@ -17,7 +17,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     locales: {
         '/': {
             lang: 'zh-CN',
-            title: "bonote",
+            title: "Bohr-L's Note",
             description: '一些技术相关的经验、随想、资源收藏',
         }
     },
@@ -137,7 +137,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
                 {
                     iconClass: 'icon-github',
                     title: 'Star我',
-                    link: 'https://github.com/moxiaolong'
+                    link: 'https://github.com/Bohr-L'
                 },
 
                 {
@@ -162,7 +162,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
         // 页脚信息
         footer: { // 页脚信息
             createYear: 2025, // 博客创建年份
-            copyrightInfo: 'BO-NOTE', // 博客版权信息，支持a标签
+            copyrightInfo: 'Bohr-L's note, // 博客版权信息，支持a标签
             // copyrightInfo: 'bonote | <a href="https://beian.miit.gov.cn/" target="_blank" style="font-weight:normal">冀ICP备2021002204号</a> ', // 博客版权信息，支持a标签
         },
 
@@ -180,7 +180,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
         //     href: '//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'
         // }], //favicons，资源放在public文件夹
 
-        ['meta', {name: 'keywords', content: '开发技术,哲学,BO-NOTE,刘博'}],
+        ['meta', {name: 'keywords', content: '开发技术,哲学,Bohr-L's Note,刘博'}],
         // ['meta', {name: 'baidu-site-verification', content: '7F55weZDDc'}],// 百度统计博主验证
         ['meta', {name: 'theme-color', content: '#7b074b'}], // 移动浏览器主题颜色
         //<meta name="viewport" content="width=device-width,initial-scale=1">

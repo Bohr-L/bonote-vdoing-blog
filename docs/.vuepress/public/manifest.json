@@ -1,6 +1,6 @@
 {
-  "name": "BO-NOTE",
-  "short_name": "BO-NOTE",
+  "name": "Bohr-L's Note",
+  "short_name": "Bohr-L's Note",
   "description": "一些技术，一些随想，一些资源收藏。",
   "start_url": "/",
   "display": "standalone",
