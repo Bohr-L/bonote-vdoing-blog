@@ -1,52 +1,66 @@
 name: CI
 
-#on: [push]
-
-# 在master分支发生push事件时触发。
+# 仅在master分支push时触发
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs: # 工作流
-  build: # 自定义名称
-    runs-on: ubuntu-latest #运行在虚拟机环境ubuntu-latest
+  build-and-deploy: # 重命名job，更贴合部署场景
+    if: false # 关闭工作流暂时
+    runs-on: ubuntu-latest # 运行在GitHub的ubuntu虚拟机
 
     strategy:
       matrix:
-        node-version: [12.x]
+        node-version: [24.x] # 建议升级到16+/18+（12.x已停更），如项目兼容可改
 
     steps: # 步骤
-      - name: Checkout # 步骤1
-        uses: actions/checkout@v1 # 使用的动作。格式：userName/repoName。作用：检出仓库，获取源码。 官方actions库：https://github.com/actions
-      - name: Use Node.js ${{ matrix.node-version }} # 步骤2
-        uses: actions/setup-node@v1 # 作用：安装nodejs
+      - name: Checkout # 步骤1：拉取仓库代码
+        uses: actions/checkout@v3 # 升级到v3（v1已过时，兼容性更好）
+
+      - name: Use Node.js ${{ matrix.node-version }} # 步骤2：安装Node.js
+        uses: actions/setup-node@v3 # 升级到v3
         with:
-          node-version: ${{ matrix.node-version }} # 版本
-      - name: run deploy.sh # 步骤3 （同时部署到github和coding）
-        env: # 设置环境变量
-          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }} # toKen私密变量
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm' # 缓存npm依赖，加速构建
+
+      - name: Install dependencies and build # 步骤3：安装依赖+构建项目
+        env: # 保留原有环境变量（如果deploy命令需要）
+          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           CODING_TOKEN: ${{ secrets.CODING_TOKEN }}
-        run: npm install && npm run deploy
+        run: |
+          npm install # 安装项目依赖
+          npm run deploy # 执行构建（替换成实际构建命令，如npm run build）
 
-      # - name: Build and Deploy # 步骤3 （只提交到github可以使用这个步骤）
-      #   uses: JamesIves/github-pages-deploy-action@master # 作用：将项目构建和部署到github。 https://github.com/JamesIves/github-pages-deploy-action
-      #   env: # 设置环境变量
-      #     ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }} # toKen私密变量
-      #     BASE_BRANCH: master # 要部署的文件夹所在的分支.
-      #     BRANCH: gh-pages # 部署到的分支
-      #     FOLDER: docs/.vuepress/dist # 要部署的文件夹.
-      #     BUILD_SCRIPT: npm install && npm run build && cd docs/.vuepress/dist && echo 'xugaoyi.com' > CNAME && cd - # 部署前要执行的命令（记得cd进入某个目录后，后面要cd -退回开始的目录）
+      # 新增核心步骤：部署到Linux服务器
+      - name: Deploy to Linux Server
+        uses: appleboy/ssh-action@master # 用SSH连接服务器
+        with:
+          host: ${{ secrets.SERVER_HOST }} # 服务器IP/域名（存在GitHub Secrets）
+          username: ${{ secrets.SERVER_USER }} # 服务器登录用户名（如root）
+          password: ${{ secrets.SERVER_PWD }} # 服务器密码（推荐用SSH密钥更安全）
+          # 服务器端执行的命令（根据你的项目路径调整）
+          script: |
+            # 进入服务器的项目目录（替换成你的实际目录，如/www/bonote）
+            cd /home/bonote-vdoing-blog
+            # 清空旧文件（谨慎使用，确保目录正确）
+            rm -rf *
+            # 从GitHub CI服务器上传构建产物到服务器（替换dist为你的实际构建目录）
+            scp -r $GITHUB_WORKSPACE/dist/* ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }}:/home/bonote/
+            # 可选：如果是Node服务，重启服务（如用pm2）
+            # pm2 restart bonote-vdoing-blog || pm2 start bonote-vdoing-blog
 
-#      - name: 'Send mail'
-#        uses: dawidd6/action-send-mail@master
-#        with:
-#          server_address: smtp.exmail.qq.com
-#          server_port: 465
-#          username: ${{ secrets.MAILUSERNAME }}
-#          password: ${{ secrets.MAILPASSWORD }}
-#          subject: bonote推送完成
-#          body: bonote推送完成
-#          to: ${{ secrets.TOMAILUSERNAME }}
-#          from: GitHub Actions
-#          content_type: text/html
+      # 可选：保留邮件通知（不需要则直接删除这部分）
+      - name: 'Send mail'
+        uses: dawidd6/action-send-mail@master
+        with:
+          server_address: smtp.exmail.qq.com
+          server_port: 465
+          username: ${{ secrets.MAILUSERNAME }}
+          password: ${{ secrets.MAILPASSWORD }}
+          subject: bonote推送完成
+          body: bonote推送完成
+          to: ${{ secrets.TOMAILUSERNAME }}
+          from: GitHub Actions
+          content_type: text/html
