@@ -1,5 +1,5 @@
 /**
- * 提示：如您想使用JS版本的配置文件可参考：https://github.com/xugaoyi/vuepress-theme-vdoing/tree/a2f03e993dd2f2a3afdc57cf72adfc6f1b6b0c32/docs/.vuepress
+ * 提示：如您想使用JS版本的配置文件可参考：https://github.com/Bohr-L/vuepress-theme-vdoing/tree/a2f03e993dd2f2a3afdc57cf72adfc6f1b6b0c32/docs/.vuepress
  */
 import {resolve} from 'path'
 import {defineConfig4CustomTheme, UserPlugins} from 'vuepress/config'
@@ -59,7 +59,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
         editLinks: false, // 启用编辑
         editLinkText: '编辑',
 
-        //*** 以下是Vdoing主题相关配置，文档：https://doc.xugaoyi.com/pages/a20ce8/ ***//
+        //*** 以下是Vdoing主题相关配置，文档：https://doc.Bohr-L.com/pages/a20ce8/ ***//
 
         // category: false, // 是否打开分类功能，默认true
         // tag: false, // 是否打开标签功能，默认true
@@ -67,9 +67,9 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
         // categoryText: '随笔', // 碎片化文章（_posts文件夹的文章）预设生成的分类值，默认'随笔'
 
         // bodyBgImg: [
-        //   'https://cdn.jsdelivr.net/gh/xugaoyi/image_store/blog/20200507175828.jpeg',
-        //   'https://cdn.jsdelivr.net/gh/xugaoyi/image_store/blog/20200507175845.jpeg',
-        //   'https://cdn.jsdelivr.net/gh/xugaoyi/image_store/blog/20200507175846.jpeg'
+        //   'https://cdn.jsdelivr.net/gh/Bohr-L/image_store/blog/20200507175828.jpeg',
+        //   'https://cdn.jsdelivr.net/gh/Bohr-L/image_store/blog/20200507175845.jpeg',
+        //   'https://cdn.jsdelivr.net/gh/Bohr-L/image_store/blog/20200507175846.jpeg'
         // ], // body背景大图，默认无。 单张图片 String | 多张图片 Array, 多张图片时每隔15秒换一张。
         // bodyBgImgOpacity: 0.5, // body背景图透明度，选值 0.1~ 1.0, 默认0.5
         // titleBadge: false, // 文章标题前的图标是否显示，默认true
@@ -129,7 +129,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
             slogan: 'I\'m a slow walker, But I never walk backwards.'
         },
 
-        // 社交图标 (显示于博主信息栏和页脚栏。内置图标：https://doc.xugaoyi.com/pages/a20ce8/#social)
+        // 社交图标 (显示于博主信息栏和页脚栏。内置图标：https://doc.Bohr-L.com/pages/a20ce8/#social)
         social: { // 社交图标，显示于博主信息栏和页脚栏
             // iconfontCssFile: '//at.alicdn.com/t/font_1879460_0lacnxoigx9.css', // 可选，阿里图标库在线css文件地址，对于主题没有的图标可自由添加
             iconfontCssFile: 'https://at.alicdn.com/t/c/font_5043175_ij79oblabi.css',
@@ -265,8 +265,8 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
         //             clientID: 'a6e1355287947096b88b',
         //             clientSecret: 'f0e77d070fabfcd5af95bebb82b2d574d7248d71',
         //             repo: 'blog-gitalk-comment', // GitHub 仓库
-        //             owner: 'xugaoyi', // GitHub仓库所有者
-        //             admin: ['xugaoyi'], // 对仓库有写权限的人
+        //             owner: 'Bohr-L', // GitHub仓库所有者
+        //             admin: ['Bohr-L'], // 对仓库有写权限的人
         //             // distractionFreeMode: true,
         //             pagerDirection: 'last', // 'first'正序 | 'last'倒序
         //             id: '<%- (frontmatter.permalink || frontmatter.to.path).slice(-16) %>', //  页面的唯一标识,长度不能超过50

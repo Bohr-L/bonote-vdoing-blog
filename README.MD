@@ -1,12 +1,12 @@
-<p align="center"><a href="https://xugaoyi.com/" target="_blank" rel="noopener noreferrer"><img width="180" src="https://cdn.jsdelivr.net/gh/xugaoyi/image_store/blog/20200409124835.png" alt="logo"></a></p>
+<p align="center"><a href="https://Bohr-L.com/" target="_blank" rel="noopener noreferrer"><img width="180" src="https://cdn.jsdelivr.net/gh/Bohr-L/image_store/blog/20200409124835.png" alt="logo"></a></p>
 
 <p align="center">
-  <a href="https://github.com/xugaoyi/vuepress-theme-vdoing/actions?query=workflow%3ACI"><img src="https://github.com/xugaoyi/vuepress-theme-vdoing/workflows/CI/badge.svg" alt="CI"></a>
-  <a href="https://github.com/xugaoyi/vuepress-theme-vdoing/actions?query=workflow%3AbaiduPush"><img src="https://github.com/xugaoyi/vuepress-theme-vdoing/workflows/baiduPush/badge.svg" alt="baiduPush"></a>
-  <a href="https://github.com/xugaoyi/vuepress-theme-vdoing/blob/master/LICENSE"><img src="https://img.shields.io/github/license/xugaoyi/vuepress-theme-vdoing
+  <a href="https://github.com/Bohr-L/vuepress-theme-vdoing/actions?query=workflow%3ACI"><img src="https://github.com/Bohr-L/vuepress-theme-vdoing/workflows/CI/badge.svg" alt="CI"></a>
+  <a href="https://github.com/Bohr-L/vuepress-theme-vdoing/actions?query=workflow%3AbaiduPush"><img src="https://github.com/Bohr-L/vuepress-theme-vdoing/workflows/baiduPush/badge.svg" alt="baiduPush"></a>
+  <a href="https://github.com/Bohr-L/vuepress-theme-vdoing/blob/master/LICENSE"><img src="https://img.shields.io/github/license/Bohr-L/vuepress-theme-vdoing
 " alt="License"></a>
   <a href="https://www.npmjs.com/package/vuepress-theme-vdoing"><img alt="npm" src="https://img.shields.io/npm/v/vuepress-theme-vdoing"></a>
-  <a href="https://github.com/xugaoyi/vuepress-theme-vdoing/stargazers"><img src="https://img.shields.io/github/stars/xugaoyi/vuepress-theme-vdoing?logo=ReverbNation&logoColor=rgba(255,255,255,.6)" alt="GitHub stars"></a>
+  <a href="https://github.com/Bohr-L/vuepress-theme-vdoing/stargazers"><img src="https://img.shields.io/github/stars/Bohr-L/vuepress-theme-vdoing?logo=ReverbNation&logoColor=rgba(255,255,255,.6)" alt="GitHub stars"></a>
 
   
 
@@ -16,7 +16,7 @@
 
 
 
-[bonote.com](https://bonote.com/) | [使用文档](https://xugaoyi.github.io/vuepress-theme-vdoing-doc/) | [Evan's blog](https://xugaoyi.com/) 
+[bonote.com](https://bonote.com/) | [使用文档](https://Bohr-L.github.io/vuepress-theme-vdoing-doc/) | [Evan's blog](https://Bohr-L.com/) 
 
 ## 介绍
 1. 这个主题的初衷是打造一个好用的、面向程序员的`知识管理工具`
@@ -26,20 +26,20 @@
 
 ## 上新推荐 🎉
 * `v1.2.x`：这个版本对整体的UI细节做了很多优化，比如标签栏和分类栏等 (2020.06.09)
-* `v1.1.x`：从这个版本开始主题新增了两个`超好用`、`高颜值`的Markdown容器，快去 [体验](https://xugaoyi.github.io/vuepress-theme-vdoing-doc/pages/d0d7eb) 吧~ (2020.05.29)
+* `v1.1.x`：从这个版本开始主题新增了两个`超好用`、`高颜值`的Markdown容器，快去 [体验](https://Bohr-L.github.io/vuepress-theme-vdoing-doc/pages/d0d7eb) 吧~ (2020.05.29)
 
 ## 这个主题可以做什么？
-* 案例1：[知识库兼博客站](https://xugaoyi.com/)
-* 案例2：[仅博客站](https://xugaoyi.github.io/vdoing-demo-blog/)
-* 案例3：[仅知识库](https://xugaoyi.github.io/vdoing-demo-repository/)
-* 案例4：[文档站](https://xugaoyi.github.io/vuepress-theme-vdoing-doc/)
+* 案例1：[知识库兼博客站](https://Bohr-L.com/)
+* 案例2：[仅博客站](https://Bohr-L.github.io/vdoing-demo-blog/)
+* 案例3：[仅知识库](https://Bohr-L.github.io/vdoing-demo-repository/)
+* 案例4：[文档站](https://Bohr-L.github.io/vuepress-theme-vdoing-doc/)
 
 
 ## 快速上手
 
 ```bash
 # clone the project
-git clone https://github.com/xugaoyi/vuepress-theme-vdoing.git
+git clone https://github.com/Bohr-L/vuepress-theme-vdoing.git
 
 # enter the project directory
 cd vuepress-theme-vdoing
@@ -51,17 +51,17 @@ npm install # or yarn install
 npm run dev # or yarn dev
 ```
 ## 更新日志
-[更新日志](https://github.com/xugaoyi/vuepress-theme-vdoing/releases)
+[更新日志](https://github.com/Bohr-L/vuepress-theme-vdoing/releases)
 
 ## 赞赏
 **愿这款知识管理主题能够助你变得强大。**
 你任何形式的支持都是对我的肯定，我会坚持初心把这个项目做得更好。当然，能获得赞赏将会使我更有动力去做好这个项目😀~~
-如果你觉得这个项目对你有帮助，可以给作者打赏一杯咖啡☕ ，前往 [赞赏](https://xugaoyi.github.io/vuepress-theme-vdoing-doc/pages/1b12ed/) 。
+如果你觉得这个项目对你有帮助，可以给作者打赏一杯咖啡☕ ，前往 [赞赏](https://Bohr-L.github.io/vuepress-theme-vdoing-doc/pages/1b12ed/) 。
 
 ## 致谢
-感谢为这个项目贡献过代码的朋友们 → [PR](https://github.com/xugaoyi/vuepress-theme-vdoing/pulls?q=is%3Apr+is%3Aclosed)
+感谢为这个项目贡献过代码的朋友们 → [PR](https://github.com/Bohr-L/vuepress-theme-vdoing/pulls?q=is%3Apr+is%3Aclosed)
 
 ## 许可证
-[MIT](https://github.com/xugaoyi/vuepress-theme-vdoing/blob/master/LICENSE)
+[MIT](https://github.com/Bohr-L/vuepress-theme-vdoing/blob/master/LICENSE)
 
 Copyright (c) 2019-present Evan Xu
